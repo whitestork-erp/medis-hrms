@@ -6,6 +6,15 @@ All notable changes to the Medis HRMS fork will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to a custom versioning scheme: `v{upstream-version}+medis{patch}`.
 
+## [v16.0.0+medis2] - 2026-01-13
+
+### Removed
+
+- Half holiday functionality in `shift_type.py`
+  - Removed `is_half_holiday` import from `erpnext.setup.doctype.holiday_list.holiday_list` (not implemented in ERPNext 15)
+  - Commented out `is_half_holiday()` method and its usage in shift processing
+  - Disabled half-day threshold adjustments for half holidays
+
 ## [v16.0.0+medis1] - 2026-01-13
 
 ### Fixed
